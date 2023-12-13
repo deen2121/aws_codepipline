@@ -14,3 +14,10 @@ if __name__ == "__main__":
     import sys
     csv_file_path = sys.argv[1]
     process_housing_data(csv_file_path)
+    import sys
+
+if len(sys.argv) < 2:
+    print("Usage: python process_data.py <csv_file_path>")
+    sys.exit(1)
+
+csv_file_path = sys.argv[1]
