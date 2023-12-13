@@ -10,12 +10,4 @@ def process_housing_data(csv_file):
     # Example: data_processing_steps(data)
     # ...
 
-if __name__ == "__main__":
-    # Assuming CSV file path is passed as a command-line argument
-    if len(sys.argv) < 2:
-        print("Usage: python process_data.py <csv_file_path>")
-        sys.exit(1)
-
-    csv_file_path = sys.argv[1]
-    process_housing_data(csv_file_path)
 
