@@ -1,6 +1,7 @@
 # process_data.py
 
 import pandas as pd
+import sys
 
 def process_housing_data(csv_file):
     # Your data processing logic here
@@ -11,13 +12,10 @@ def process_housing_data(csv_file):
 
 if __name__ == "__main__":
     # Assuming CSV file path is passed as a command-line argument
-    import sys
+    if len(sys.argv) < 2:
+        print("Usage: python process_data.py <csv_file_path>")
+        sys.exit(1)
+
     csv_file_path = sys.argv[1]
     process_housing_data(csv_file_path)
-    import sys
 
-if len(sys.argv) < 2:
-    print("Usage: python process_data.py <csv_file_path>")
-    sys.exit(1)
-
-csv_file_path = sys.argv[1]
